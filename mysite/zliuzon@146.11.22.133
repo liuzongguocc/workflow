@@ -1,0 +1,10 @@
+#!/usr/bin/expect
+set timeout 5
+spawn ssh zliuzon@146.11.22.133
+expect {
+"*yes/no" { send "yes\r"; exp_continue }
+"*assword" { send "0\n" }
+#"*assword" { send "qwqwqw\n" }
+}
+interact
+
