@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{title}}</title>
+    
+</head>
+<body>
+   {%if user%}
+    <li>{{user.name}}</li>
+   {%else%}
+   <li>用户不存在</li>
+   {%endif%}
+
+   {%for l in list%}
+   <li>num:{{l}}</li>
+   {%endfor%}
+
+   <h1>id:{{id}}</h1>
+</body>
+</html>
