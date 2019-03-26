@@ -1,19 +1,26 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html>
 <head>
-    <meta http-equiv="X-UA-Compatible"content="IE=Edge">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=l">
-    <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="http://necolas.github.io/normalize.css/">
-    <link rel="stylesheet"
-href ="http://libs.baidu.com/bootstrap/3.0:3/css/bootstrap.min.css">
+    <title>{% block title %}默认标题{% endblock %} - 自强学堂</title>
 </head>
 <body>
-    <div class="container">
-    {% block content %｝
-    {% endblock %}
-    </div>
-    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+ 
+
+ 
+{% block content %}
+<div>这里是默认内容，所有继承自这个模板的，如果不覆盖就显示这里的默认内容。</div>
+{% endblock %}
+{{ string }}
+教程列表：
+{% for i in TutorialList %}
+{{ i }}
+{% endfor %}
+
+{{ request.path }}
+{{ request.user }}
+
+ 
+
+ 
 </body>
 </html>

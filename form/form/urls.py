@@ -1,4 +1,4 @@
-"""mysite URL Configuration
+"""form URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.10/topics/http/urls/
@@ -15,11 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from django.conf.urls import include
-from blog import views as vvv
+from form import views as vv
+admin.autodiscover()
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-#    url(r"^blog/", include('blog.urls', namespace='blog' , app_name='blog')),
-    url(r'^$', vvv.index, name='hello'),
-
+    url(r'^index/$', vv.index,name = "index"),
 ]
